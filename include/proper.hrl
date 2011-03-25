@@ -20,6 +20,9 @@
 %%% This should be included in each file containing user type declarations
 %%% and/or properties to be tested.
 
+-ifndef(PROPER_HRL).
+-define(PROPER_HRL, true).
+
 -include("proper_common.hrl").
 
 
@@ -93,4 +96,6 @@
 -else.
 -compile({parse_transform, proper_transformer}).
 -endif.
+-endif.
+
 -endif.
